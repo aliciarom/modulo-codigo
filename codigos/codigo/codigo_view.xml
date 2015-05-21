@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Module XML -->
+<openerp>
+  <data>
+    
+    <!-- La vista tree o árbol es una vista en formato lista -->
+    <!--contiene la definicion de la vista-->
+		<record model="ir.ui.view" id="view_codigo_tree">		 
+			<field name="name">codigo.tree</field>
+			<field name="model">codigo</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Codigo">
+          <field name="lista_codigos"/>
+				</tree>
+			</field>
+		</record>
+		
+		<!-- Form View Records -->
+    <record model="ir.ui.view" id="view_codigo_form">
+      <field name="name">codigo.form</field>
+      <field name="model">codigo</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Codigo" version="7.0" >
+          <sheet>
+          <group string="Codigos" colspan='2' col='4'>
+            <field name="lista_codigos" nolabel="1"/>
+          </group>
+          <group string="Lista" colspan='2' col='2'>
+            <field name="lista_o2m_ids" nolabel="1"/>
+          </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+    
+    <!-- Search View Records -->
+		<record  model="ir.ui.view" id="view_codigo_search">
+			<field name="name">codigo.search</field>
+			<field name="model">codigo</field>
+			<field name="type">search</field>
+			<field name="arch" type="xml">					
+				<search string="codigo">
+          <field name="lista_codigos"/>
+				</search>
+			</field>
+    </record>
+  <!-- Action Records -->	
+		<record model="ir.actions.act_window" id="action_codigo">
+			<field name="name">Codigos</field>
+			<field name="view_id" ref="view_codigo_tree"/>
+			<field name="view_mode">tree,form</field>
+			<field name="res_model">codigo</field> 
+		</record>
+		<!-- Menu Items -->	
+		<menuitem name="Codigo"
+							parent="codigos.top_lista"  
+							id="listado_codigo"
+							action="action_codigo"/> 
+  </data>
+</openerp>

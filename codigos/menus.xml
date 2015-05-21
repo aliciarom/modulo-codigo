@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Menus XML -->
+<openerp>
+  <data>
+        <menuitem id="top_codigo" name="Codigo" sequence="1000"/>
+          <menuitem id="top_lista" name="Lista de Codigos" sequence="300" parent="codigos.top_codigo"/>
+  </data>
+</openerp>
