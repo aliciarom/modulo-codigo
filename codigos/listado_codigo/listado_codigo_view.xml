@@ -12,7 +12,7 @@
 			<field name="type">tree</field>
 			<field name="arch" type="xml">
 				<tree string="Lista de Codigos">
-          <field name="codigo_barras"/>
+          <field name="cod_barras"/>
           <field name="descripcion"/>
           <field name="precio"/>
 				</tree>
@@ -27,11 +27,11 @@
       <field name="arch" type="xml">
         <form string="Lista de Codigos" version="7.0" >
           <sheet>
-          <group colspan='2' col='2'>
-            <field name="codigo_barras"/>
+          <group string="Producto" colspan='2' col='2'>
+            <field name="cod_barras"/>
             <field name="descripcion"/>
             <field name="precio"/>
-            <field name="codigos_m2o_id"/>
+            <field name="codigos_m2o_id" invisible = "1" />
           </group>
           </sheet>
         </form>

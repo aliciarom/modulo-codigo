@@ -34,9 +34,10 @@ class listado_codigo(osv.osv):
   _table = 'listado_codigo'
  
   _columns = {
-    'codigo_barras' : fields.integer("Codigo de Barras", required=False),    
+    # 'codigo_barras' : fields.integer("Codigo de Barras", required=False),
+    'cod_barras' : fields.char("Codigo de Barras", required=False),
     'descripcion':fields.char("Descripción", required=False),
-    'precio':fields.float('precio', required=False),
+    'precio':fields.float('Precio', required=False),
     'codigos_m2o_id': fields.many2one('codigo', 'codigoo')
     # 'fecha':fields.date("fecha", required=False),
 

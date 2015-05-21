@@ -35,7 +35,7 @@ class codigo(osv.osv):
  
   _columns = {
         
-    'lista_codigos':fields.text("Lista de codigos", size=1, store = False),
+    'lista_codigos':fields.text("Lista de codigos", store = False),
     'lista_o2m_ids': fields.one2many('listado_codigo', 'codigos_m2o_id', 'Listado de codigos'),
   }
     
