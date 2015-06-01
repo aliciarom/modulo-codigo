@@ -31,7 +31,10 @@
             <field name="cod_barras"/>
             <field name="descripcion"/>
             <field name="precio"/>
-            <field name="codigos_m2o_id" invisible = "1" />
+            <field name="ruta_codigo"/>
+            <field name="fecha"/>
+            <field name="precio_str" invisible="1" />
+            <field name="fecha_str" invisible="1" />
           </group>
           </sheet>
         </form>
@@ -60,6 +63,7 @@
 		<menuitem name="Lista de Codigos"
 							parent="codigos.top_lista"  
 							id="listado_codigo_muestra"
-							action="action_listado_codigo"/> 
+							action="action_listado_codigo"/>
+    
   </data>
 </openerp>

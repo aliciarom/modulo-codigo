@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-import listado_codigo
+import sm_etiquetas

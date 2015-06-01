@@ -10,7 +10,7 @@
 #OpenERP Imports
 from osv import fields, osv
 from datetime import datetime, date
-
+import time
 
 #Modulo ::
 class listado_codigo(osv.osv):
@@ -34,13 +34,13 @@ class listado_codigo(osv.osv):
   _table = 'listado_codigo'
  
   _columns = {
-    # 'codigo_barras' : fields.integer("Codigo de Barras", required=False),
     'cod_barras' : fields.char("Codigo de Barras", required=False),
     'descripcion':fields.char("Descripción", required=False),
     'precio':fields.float('Precio', required=False),
-    'codigos_m2o_id': fields.many2one('codigo', 'codigoo')
-    # 'fecha':fields.date("fecha", required=False),
-
+    'ruta_codigo' : fields.char("Ruta", required=False),
+    'fecha':fields.date("fecha", required=False),
+    'precio_str' : fields.char("Precio cadena", required=False),
+    'fecha_str':fields.char("fecha", required=False),
   }
     
   #Valores por defecto de los campos del diccionario [_columns]

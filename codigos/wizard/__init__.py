@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-import codigo
+import wizard_codigo

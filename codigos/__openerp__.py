@@ -24,8 +24,8 @@
     
     #Archivo principal de menús
     'menus.xml',
-     'codigo/codigo_view.xml',
      'listado_codigo/listado_codigo_view.xml',
+     'wizard/wizard_codigo_view.xml',
   ],
   'demo_xml': [
                ],
