@@ -49,6 +49,22 @@
 							 background="black"
 							 leading="-70"
 							 alignment="CENTER"/>
+				
+				<paraStyle name="PE"
+							 fontname="Helvetica" 	 
+							 fontSize="7.0"
+							 fontcolor="white"
+							 alignment="CENTER"
+							 leading="-15.0"/>
+				
+								<paraStyle name="PE"
+							 fontname="Helvetica" 	 
+							 fontSize="7.0"
+							 backColor ="#fafafa"
+							 alignment="CENTER"
+							 leading="-15.0"
+							 />
+				
 	</stylesheet>
 	<story firstPageTemplate="main">
 		<setNextTemplate name="segundo"/>
