@@ -2,7 +2,7 @@
 
 <!-- RML Documento -->
 
-<document filename="test_004_fpt_templates.pdf">
+<document filename="etiquetas.pdf">
 	<template pageSize="(8.500in.0,11.000in)" leftMargin="72">
 	<pageTemplate id="main">
 		<pageGraphics>
@@ -28,59 +28,42 @@
 		</blockTableStyle>
 		<paraStyle name="P6"
 							 fontName="Helvetica"
-							 fontSize="9.0"
+							 fontSize="8.0"
 							 alignment="CENTER"
-							 spaceAfter="0.18in"
 							 />
 		<paraStyle name="P9"
 							 fontName="Helvetica-Bold"
 							 fontSize="19.0"
 							 alignment="CENTER"
-							 spaceAfter="0.25in"/>
+							 />
 				<paraStyle name="PF"
 							 fontname="Courier" 	 
 							 fontSize="3.0"
 							 alignment="justify"
-							 leading="-50"/>
+							 leading="-15"/>
 				
 				<paraStyle name="PE"
 							 fontname="Helvetica" 	 
-							 fontSize="7.0"
-							 background="black"
-							 leading="-70"
-							 alignment="CENTER"/>
-				
-				<paraStyle name="PE"
-							 fontname="Helvetica" 	 
-							 fontSize="7.0"
-							 fontcolor="white"
-							 alignment="CENTER"
-							 leading="-15.0"/>
-				
-								<paraStyle name="PE"
-							 fontname="Helvetica" 	 
-							 fontSize="7.0"
-							 backColor ="#fafafa"
+							 fontSize="6.0"
+							 backColor ="#ffffff"
 							 alignment="CENTER"
 							 leading="-15.0"
-							 />
-				
+							 />				
 	</stylesheet>
 	<story firstPageTemplate="main">
 		<setNextTemplate name="segundo"/>
 		<nextFrame/>
-		<blockTable colWidths="2.066924in" style="etiqueta" rowHeights="1.2130in" repeatRows="1">	
+		<blockTable colWidths="2.066924in" style="etiqueta" rowHeights="1.2130in">	
       <tr>
         <td>[[ repeatIn(get_datos_etiquetas(), 'ref') ]]
-					<!--<para style="PF"> </para>-->
 					<para style="PF">[[ ref['fecha_muestra'] ]] </para>
-					<para style="PE">[[ ref['ean13'] ]] </para>
 					<para style="P6">[[ ref['nombre'] ]]</para>
-					<!--<spacer length="0.05in"/>-->
+					<spacer length="0.025in"/>
 					<para style="P9">$ [[ ref['precio_s'] ]]</para>
-					<!--<spacer length="0.05in"/>-->
-					<para> [[ setTag('para','image',{'file':ref['ruta'], 'width':'2.000in','height':'0.300in'  }) ]] </para>
-					
+					<spacer length="0.45in"/>
+					<para style="PE">[[ ref['ean13'] ]] </para>
+					<para style="P6"> [[ setTag('para','image',{'file':ref['ruta'], 'width':'2.000in','height':'0.300in'}) ]] </para>
+					<!--<para style="PF"><image file="/opt/openerp/server/openerp/addons/codigos/img/rectangulo-blanco.png" width="2.100in" height="0.100in" /></para>-->
         </td>
       </tr>
     </blockTable>

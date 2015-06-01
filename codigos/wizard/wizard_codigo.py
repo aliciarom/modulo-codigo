@@ -18,7 +18,7 @@ from barcode.writer import ImageWriter
 from barcode import generate
 from StringIO import StringIO
 
-#Modelo para gestionar el reporte del Índice de Consultas por Tipo
+#Modelo
 class wizard_codigo(osv.osv_memory):
  
   #Descripcion tipo consulta
